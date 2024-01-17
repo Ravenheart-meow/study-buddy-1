@@ -1,0 +1,65 @@
+/* Reset default list styling */
+ol, ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Main menu container */
+#mainMenu {
+	margin: 10px;
+	width: 900px;
+	font-family: sans-serif;
+}
+
+/* Main menu items */
+#mainMenu li {
+	position: relative;
+	display: block;
+	width: 120px;
+	float: left;
+	margin-left: 2px;
+	border: 1px solid #000;
+}
+
+/* Main menu links */
+#mainMenu a {
+	display: block;
+	padding: 3px;
+	text-decoration: none;
+	background-color: #ce1e8a;
+	color: #009;
+}
+
+/* Hover effect for main menu links */
+#mainMenu a:hover {
+	background-color: #009;
+	color: #96108b;
+}
+
+/* Submenu container */
+#mainMenu li ul {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	left: -3px;
+	top: 22px;
+	display: none;
+}
+
+/* Submenu items */
+#mainMenu li ul li {
+	width: 150px;
+	font-size: smaller;
+	border-top: none;
+}
+
+/* Style for the first item in each submenu */
+#mainMenu li ul li:first-child {
+	border-top: 1px solid #000;
+}
+
+/* Show submenu on hover */
+#mainMenu li:hover ul {
+	display: block;
+}

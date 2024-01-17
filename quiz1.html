@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - CompTIA A+</title>
+    <link rel="stylesheet" href="style.css">
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz - CompTIA A+</title>
+        <link rel="stylesheet" href="your-stylesheet.css">
+    </head>
+
+    <nav>
+        <ul>
+            <li><a href="C:\Users\raven\OneDrive\Desktop\StuddyBuddy\index.html">Home</a></li>
+        </ul>
+    </nav>
+    
+    <body>
+        <header>
+            <h1>CompTIA A+ Quiz</h1>
+        </header>
+    
+        <main>
+            <section>
+                <h2>Question 1</h2>
+                <p>What does CPU stand for?</p>
+                <form id="quizForm">
+                    <label>
+                        <input type="radio" name="q1" value="a"> Central Processing Unit
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="b"> Computer Personal Unit
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="c"> Central Processor Unit
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="d"> Central Process Unit
+                    </label>
+                </form>
+                <button onclick="submitQuiz()">Submit</button>
+            </section>
+        </main>
+    
+        <footer>
+            <p>&copy; 2024 CompTIA A+ Quiz</p>
+        </footer>
+    
+        <script>
+            function submitQuiz() {
+                // Define correct answers for each question
+                const correctAnswers = {
+                    q1: 'a', // Replace with correct answer for each question
+                    // Add more questions as needed
+                };
+    
+                // Get user-selected answers
+                const userAnswers = {
+                    q1: document.querySelector('input[name="q1"]:checked') ? document.querySelector('input[name="q1"]:checked').value : null,
+                    // Add more questions as needed
+                };
+    
+                // Check answers and calculate score
+                let score = 0;
+                for (const question in correctAnswers) {
+                    if (userAnswers[question] === correctAnswers[question]) {
+                        score++;
+                    }
+                }
+    
+                // Display feedback popup
+                const feedback = `You scored ${score} out of ${Object.keys(correctAnswers).length}!`;
+                if (score === Object.keys(correctAnswers).length) {
+                    alert(`${feedback} Congratulations! You got all questions correct.`);
+                } else {
+                    const incorrectAnswers = Object.keys(correctAnswers).filter(question => userAnswers[question] !== correctAnswers[question]);
+                    alert(`${feedback}\n\nIncorrect answers:\n${incorrectAnswers.map(q => `Question ${q}: ${userAnswers[q]}`).join('\n')}`);
+                }
+            }
+        </script>
+    </body>
+    
+    </html>
+    

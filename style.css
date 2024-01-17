@@ -1,0 +1,49 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff; /* Set your preferred background color */
+    color: #000; /* Set your preferred text color */
+}
+
+header {
+    background-color: magenta; /* Your main color - magenta */
+    color: #fff; /* Text color for the header */
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #333; /* Dark background color for navigation */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* Text color for navigation links */
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333; /* Dark background color for footer */
+    color: #fff; /* Text color for the footer */
+    padding: 10px;
+    text-align: center;
+}
